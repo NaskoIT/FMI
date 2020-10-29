@@ -36,7 +36,8 @@ int main()
 
 		cout << digitsAfterDeciamalPoint << endl;
 	}
-	else {
+	else 
+	{
 		cout << "NO" << endl;
 	}
 }

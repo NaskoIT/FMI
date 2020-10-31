@@ -16,14 +16,26 @@
 #include <iostream>
 using namespace std;
 
+int countDigitsAfterDecimalPoint(int numerator, int denominator)
+{
+	int count = 0;
+	while (numerator % denominator != 0) 
+	{
+		numerator = numerator % denominator;
+		numerator *= 10;
+		count++;
+	}
+
+	return count;
+}
+
 int main()
 {
 	int inputNumber;
 	cin >> inputNumber;
-	if (!cin || inputNumber < 2 || inputNumber > pow(10, 9))
+	while (!cin || inputNumber < 2 || inputNumber > pow(10, 9))
 	{
-		cout << "-1";
-		return -1;
+		cin >> inputNumber;
 	}
 
 	int number = inputNumber;
@@ -46,19 +58,12 @@ int main()
 
 	if (number == 1) 
 	{
-		double reciprocalNumber = 1.0 / inputNumber;
-		int digitsAfterDeciamalPoint = 0;
-
-		while (reciprocalNumber > int(reciprocalNumber)) 
-		{
-			digitsAfterDeciamalPoint++;
-			reciprocalNumber *= 10;
-		}
-
-		cout << digitsAfterDeciamalPoint << endl;
+		cout << countDigitsAfterDecimalPoint(1, inputNumber) << endl;
 	}
 	else 
 	{
 		cout << "NO" << endl;
 	}
+
+	return 0;
 }

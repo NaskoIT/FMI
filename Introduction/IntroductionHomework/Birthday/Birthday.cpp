@@ -15,12 +15,6 @@
 #include <iostream>
 using namespace std;
 
-int terminateProgram()
-{
-	cout << "-1";
-	return -1;
-}
-
 int main()
 {
 	const double MONEY_GIFT = 30;
@@ -30,23 +24,20 @@ int main()
 	double laptopPrice;
 	double presentPrice;
 
-	cin >> age;
-	if(!cin || age <= 0) 
+	do
 	{
-		return terminateProgram();
-	}
+		cin >> age;
+	} while (!cin || age <= 0);
 
-	cin >> laptopPrice;
-	if (!cin || laptopPrice <= 0)
+	do
 	{
-		return terminateProgram();
-	}
+		cin >> laptopPrice;
+	} while (!cin || laptopPrice <= 0);
 
-	cin >> presentPrice;
-	if (!cin || presentPrice <= 0)
+	do
 	{
-		return terminateProgram();
-	}
+		cin >> presentPrice;
+	} while (!cin || presentPrice <= 0);
 
 	int evenBirthdays = age / 2;
 	// Sum first elements n of some arithmetic progression formula (2 * a + (n - 1) * d) * (n / 2)

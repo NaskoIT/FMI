@@ -40,7 +40,6 @@ int main()
 	if (secondBiggestNumber == INT_MIN) 
 	{
 		cout << "-1";
-		return -1;
 	}
 	else 
 	{

@@ -36,34 +36,26 @@ bool isDigit(int number)
 	return number >= 0 && number <= 9;
 }
 
-int terminateProgram() 
-{
-	cout << "-1";
-	return -1;
-}
-
 int main()
 {
 	int firstNumber;
 	int secondNumber;
 	int thirdNumber;
-	cin >> firstNumber;
-	if (!cin || !isDigit(firstNumber))
-	{
-		return terminateProgram();
-	}
 
-	cin >> secondNumber;
-	if (!cin || !isDigit(secondNumber))
+	do
 	{
-		return terminateProgram();
-	}
+		cin >> firstNumber;
+	} while (!cin || !isDigit(firstNumber));
 
-	cin >> thirdNumber;
-	if (!cin || !isDigit(thirdNumber))
+	do
 	{
-		return terminateProgram();
-	}
+		cin >> secondNumber;
+	} while (!cin || !isDigit(secondNumber));
+
+	do
+	{
+		cin >> thirdNumber;
+	} while (!cin || !isDigit(thirdNumber));
 
 	int smallestPalindrome = 0;
 	int zerosCount = 0;

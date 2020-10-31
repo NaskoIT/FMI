@@ -19,12 +19,11 @@ using namespace std;
 int main()
 {
 	int number;
-	cin >> number;
-	if (!cin || number <= 0 || number > pow(10, 9))
+
+	do
 	{
-		cout << "-1";
-		return -1;
-	}
+		cin >> number;
+	} while (!cin || number <= 0 || number > pow(10, 9));
 
 	int firstDivisor = 0;
 	int secondDivisor = 0;

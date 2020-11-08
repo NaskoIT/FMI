@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+    //Task 2
     // 5 -> 10 20 20 40 50 -> 20 -> true
     // 2 -> 10 10 -> 10-> true
     // 3 -> 10 15 10 -> 10 -> fasle
@@ -11,6 +12,9 @@ int main()
 
     int n;
     cin >> n;
+    if(n <= 0){
+        return 1;
+    }
     vector<int> numbers(n);
 
     for (int i = 0; i < numbers.size(); i++)

@@ -4,7 +4,6 @@
 using namespace std;
 
 vector<vector<int>> readMatrix(int rows, int cols);
-;
 
 int main()
 {

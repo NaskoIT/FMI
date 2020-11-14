@@ -9,7 +9,7 @@ int main()
 {
     // When you implement the method countSubsequences run the program and your logic will be tested automatically for a second
     // You will see how many of the test failed and how many of them passed.
-    // If the test failed you will see the expected output and you output.
+    // If the test failed you will see the difference between expected output and your output.
     runUnitTests();
 }
 

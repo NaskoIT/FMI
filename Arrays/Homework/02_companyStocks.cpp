@@ -23,13 +23,12 @@ void runUnitTests()
 {
     // TODO: add the other inputs and try to catch the edge cases
     vector<vector<double>> inputs = {
-        {9, 8, 3, 4, 2, 1, 6, 5},
-        {5, 5, 0, 5, 5},
-        {1, 2, 3, 6, 8, 7},
+        {1, 2, 3, 4, 3, 2, 1, 5},
+        {15, 14.5, 10, 7.45, 5},
     };
 
     // TODO: add the other expected outputs here
-    vector<double> expectedOutputs = {1, 1, 0};
+    vector<double> expectedOutputs = {7, 0};
 
     for (int i = 0; i < inputs.size(); i++)
     {

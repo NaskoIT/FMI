@@ -7,7 +7,7 @@ void runUnitTests();
 
 int main()
 {
-    // When you implement the method isTriangleSequence run the program and your logic will be tested automatically for a second
+    // When you implement the method calulcateMaxProfit run the program and your logic will be tested automatically for a second
     // You will see how many of the test failed and how many of them passed.
     // If the test failed you will see the expected output and you output.
     runUnitTests();

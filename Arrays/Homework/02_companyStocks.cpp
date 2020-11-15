@@ -11,6 +11,7 @@ int main()
     // You will see how many of the test failed and how many of them passed.
     // If the test failed you will see the difference between expected output and your output.
     runUnitTests();
+    return 0;
 }
 
 double calulcateMaxProfit(vector<double> collection)

@@ -31,5 +31,5 @@ void testThirdTask() {
 
 int main()
 {
-	testThirdTask();
+	testFirstTask();
 }

@@ -11,6 +11,13 @@ Person::Person(char *initName, char *initEgn) {
     strcpy(egn, initEgn);
 }
 
+Person::Person(const Person &person) {
+    name = new char[strlen(person.name) + 1];
+    strcpy(name, person.name);
+    egn = new char[EGN_LENGTH];
+    strcpy(egn, person.egn);
+}
+
 void Person::printPerson() const {
     cout << "Name: " << name << endl;
     cout << "EGN: " << egn << endl;

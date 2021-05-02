@@ -6,6 +6,11 @@ Student::Student(char *initName, char *initEgn, long initFacultyNumber, double i
     grade = initGrade;
 }
 
+Student::Student(const Student &student) : Person(student) {
+    this->facultyNumber = student.facultyNumber;
+    this->grade = student.grade;
+}
+
 void Student::printStudent() const {
     printPerson();
     cout << "Faculty number: " << facultyNumber << endl;

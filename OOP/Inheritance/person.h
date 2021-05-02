@@ -13,6 +13,8 @@ private:
 public:
     Person(char * = "", char * = "");
 
+    Person(const Person &);
+
     void printPerson() const;
 
     ~Person();

@@ -13,3 +13,12 @@ void TaxedStudent::printTaxedStudent() const {
 TaxedStudent::~TaxedStudent() {
     cout << "TaxedStudent deconstructor was invoked" << endl;
 }
+
+TaxedStudent &TaxedStudent::operator=(const TaxedStudent &taxedStudent) {
+    if (this != &taxedStudent) {
+        Student::operator=(taxedStudent);
+        tax = taxedStudent.tax;
+    }
+
+    return *this;
+}

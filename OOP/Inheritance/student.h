@@ -10,6 +10,8 @@ public:
 
     Student(const Student& student);
 
+    Student& operator=(const Student& student);
+
     void printStudent() const;
 
     ~Student();

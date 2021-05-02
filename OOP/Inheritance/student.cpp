@@ -7,8 +7,8 @@ Student::Student(char *initName, char *initEgn, long initFacultyNumber, double i
 }
 
 Student::Student(const Student &student) : Person(student) {
-    this->facultyNumber = student.facultyNumber;
-    this->grade = student.grade;
+    facultyNumber = student.facultyNumber;
+    grade = student.grade;
 }
 
 void Student::printStudent() const {
@@ -19,5 +19,13 @@ void Student::printStudent() const {
 
 Student::~Student() {
     cout << "Student destructor was invoked: " << facultyNumber << " " << grade << endl;
+}
+
+Student &Student::operator=(const Student &student) {
+    if (this != &student) {
+        Person::operator=(student);
+        facultyNumber = student.facultyNumber;
+        grade = student.grade;
+    }
 }
 

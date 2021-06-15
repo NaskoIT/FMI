@@ -1,0 +1,84 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/armor.h
+vector
+-
+utility
+-
+string
+-
+armorType.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/armorType.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/armorType.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/backpack.h
+vector
+-
+material.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/material.h
+money.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/money.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/equipment.h
+vector
+-
+weapon.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weapon.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/inventory.h
+iostream
+-
+weapon.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weapon.h
+backpack.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/backpack.h
+armor.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/armor.h
+weapon.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weapon.h
+material.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/material.h
+money.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/money.h
+equipment.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/equipment.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/main.cpp
+string
+-
+iostream
+-
+inventory.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/inventory.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/material.h
+materialType.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/materialType.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/materialType.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/money.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weapon.h
+vector
+-
+utility
+-
+string
+-
+weaponType.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weaponType.h
+weaponKind.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weaponKind.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weaponKind.h
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/02_Homework/weaponType.h
+

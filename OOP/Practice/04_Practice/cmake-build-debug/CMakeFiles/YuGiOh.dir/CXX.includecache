@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/card.hpp
+string
+-
+cardType.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/deck.hpp
+pendulumCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/pendulumCard.hpp
+vector
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/duelist.hpp
+deck.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/deck.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/magicCard.hpp
+card.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/card.hpp
+cardType.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/main.cpp
+card.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/card.hpp
+duelist.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/duelist.hpp
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/monsterCard.hpp
+card.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/card.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/pendulumCard.hpp
+magicCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/magicCard.hpp
+monsterCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Practice/monsterCard.hpp
+

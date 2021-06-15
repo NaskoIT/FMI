@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="04_Homework"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="04_Homework">
+				<Option output="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/04_Homework.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 04_Homework"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="04_Homework/fast">
+				<Option output="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/04_Homework.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 04_Homework/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/BacklogPublisher.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/BacklogPublisher.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Repository.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Repository.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/SimplePublisher.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/SimplePublisher.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Subscriber.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Subscriber.h">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Comparable.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Debug.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Document.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Document.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/KeyValueDatabase.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/KeyValueDatabase.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Object.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Object.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Serializable.hpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/main.cpp">
+			<Option target="04_Homework"/>
+		</Unit>
+		<Unit filename="C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

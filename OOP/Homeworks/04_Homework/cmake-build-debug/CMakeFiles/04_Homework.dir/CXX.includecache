@@ -1,0 +1,128 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+Subscriber.h
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Subscriber.h
+string
+-
+vector
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/BacklogPublisher.hpp
+Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+MovingAverager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp
+PeriodicSampler.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp
+SimplePublisher.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/SimplePublisher.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+string
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+string
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Repository.hpp
+Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+MovingAverager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp
+PeriodicSampler.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp
+string
+-
+vector
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/SimplePublisher.hpp
+Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+MovingAverager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp
+PeriodicSampler.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp
+vector
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Subscriber.h
+string
+-
+vector
+-
+Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Comparable.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Debug.hpp
+string
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Document.hpp
+Object.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Object.hpp
+vector
+-
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Object.hpp
+Comparable.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Comparable.hpp
+Debug.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Debug.hpp
+Serializable.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Serializable.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Serializable.hpp
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/main.cpp
+1/Averager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Averager.hpp
+1/Message.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Message.hpp
+1/MovingAverager.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/MovingAverager.hpp
+1/BacklogPublisher.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/BacklogPublisher.hpp
+1/SimplePublisher.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/SimplePublisher.hpp
+1/PeriodicSampler.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/PeriodicSampler.hpp
+1/Repository.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/1/Repository.hpp
+2/Document.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/04_Homework/2/Document.hpp
+iostream
+-
+assert.h
+-
+

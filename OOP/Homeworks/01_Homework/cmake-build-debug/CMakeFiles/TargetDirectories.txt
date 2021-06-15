@@ -1,0 +1,3 @@
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/cmake-build-debug/CMakeFiles/01_Homework.dir
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/cmake-build-debug/CMakeFiles/rebuild_cache.dir

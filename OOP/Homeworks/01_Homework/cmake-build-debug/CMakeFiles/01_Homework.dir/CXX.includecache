@@ -1,0 +1,66 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/VendingMachine.hpp
+drink.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/drink.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/drink.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/vendingMachineUnitTests.hpp
+assert.h
+-
+VendingMachine.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/VendingMachine.hpp
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/Error.hpp
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestCase.hpp
+string
+-
+Error.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/Error.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestSuite.cpp
+TestSuite.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestSuite.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestSuite.hpp
+string
+-
+vector
+-
+TestCase.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestCase.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/testEngineUnitTests.hpp
+assert.h
+-
+cstring
+-
+iostream
+-
+Error.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/Error.hpp
+TestCase.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestCase.hpp
+TestSuite.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/TestSuite.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/main.cpp
+iostream
+-
+2/testEngineUnitTests.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/2/testEngineUnitTests.hpp
+1/vendingMachineUnitTests.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/01_Homework/1/vendingMachineUnitTests.hpp
+

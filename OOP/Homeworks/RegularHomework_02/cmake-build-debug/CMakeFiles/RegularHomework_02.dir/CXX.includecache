@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Error.hpp
+string
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Optional.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Result.hpp
+Error.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Error.hpp
+Optional.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Optional.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/2/ElectionResultsDatabase.hpp
+vector
+-
+SectionVotes.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/2/SectionVotes.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/2/SectionVotes.hpp
+iostream
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/3/Vector4D.cpp
+iostream
+-
+Vector4D.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/3/Vector4D.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/3/Vector4D.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/main.cpp
+iostream
+-
+1/Error.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Error.hpp
+1/Result.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/1/Result.hpp
+3/Vector4D.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/3/Vector4D.hpp
+2/ElectionResultsDatabase.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/RegularHomework_02/2/ElectionResultsDatabase.hpp
+

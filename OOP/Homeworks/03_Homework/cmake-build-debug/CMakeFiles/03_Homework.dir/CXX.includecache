@@ -1,0 +1,62 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/Counter.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/LimitedCounter.hpp
+Counter.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/Counter.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/LimitedTwowayCounter.hpp
+TwowayCounter.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/TwowayCounter.hpp
+LimitedCounter.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/LimitedCounter.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/TwowayCounter.hpp
+Counter.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/Counter.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/Developer.hpp
+string
+-
+LeavingRequest.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/LeavingRequest.hpp
+PromotionRequest.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/PromotionRequest.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/LeavingRequest.hpp
+Request.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/Request.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/PromotionRequest.hpp
+Request.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/Request.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/Request.hpp
+string
+-
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/TeamLead.hpp
+vector
+-
+Developer.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/Developer.hpp
+LeavingRequest.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/LeavingRequest.hpp
+PromotionRequest.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/PromotionRequest.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/main.cpp
+iostream
+-
+1/LimitedTwowayCounter.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/1/LimitedTwowayCounter.hpp
+2/TeamLead.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/03_Homework/2/TeamLead.hpp
+

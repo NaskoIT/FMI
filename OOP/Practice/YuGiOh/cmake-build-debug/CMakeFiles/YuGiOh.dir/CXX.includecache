@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/card.hpp
+string
+-
+cardType.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/magicCard.hpp
+card.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/card.hpp
+cardType.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cardType.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/monsterCard.hpp
+card.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/card.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/pendulumCard.cpp
+pendulumCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/pendulumCard.hpp
+
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/pendulumCard.hpp
+magicCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/magicCard.hpp
+monsterCard.hpp
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/monsterCard.hpp
+

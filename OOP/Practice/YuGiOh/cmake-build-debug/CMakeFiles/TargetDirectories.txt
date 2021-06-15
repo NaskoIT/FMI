@@ -1,0 +1,3 @@
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cmake-build-debug/CMakeFiles/YuGiOh.dir
+C:/Users/jilan/Desktop/SU/Semester 2/OOP/Homeworks/YuGiOh/cmake-build-debug/CMakeFiles/rebuild_cache.dir

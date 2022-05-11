@@ -23,10 +23,11 @@ CREATE TABLE Users (
 	PhoneNumber NVARCHAR(20) NULL,
 	CreatedOn DATETIME2(7) NOT NULL,
 	ModifiedOn DATETIME2(7) NULL,
-	StudentId NVARCHAR(450) NULL,
 	FirstName NVARCHAR(100) NULL,
 	LastName NVARCHAR(100) NULL,
 )
+GO
+
 ALTER TABLE Users ADD DEFAULT GETDATE() FOR CreatedOn
 GO
 
@@ -34,6 +35,8 @@ CREATE TABLE UserRoles (
 	UserId INT FOREIGN KEY REFERENCES Users(Id) NOT NULL,
 	RoleId INT FOREIGN KEY REFERENCES Roles(Id) NOT NULL
 )
+GO
+
 ALTER TABLE UserRoles ADD CONSTRAINT PK_UserId_RolesId_UserRoles PRIMARY KEY (UserId, RoleId)
 GO
 
@@ -46,7 +49,7 @@ GO
 
 CREATE TABLE Lessons (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
-	[Name] NVARCHAR(50) NOT NULL,
+	[Name] NVARCHAR(100) NOT NULL,
 	CourseId INT FOREIGN KEY REFERENCES Courses(Id) NOT NULL,
 	OrderBy INT NOT NULL,
 )
@@ -54,15 +57,13 @@ GO
 
 CREATE TABLE Problems (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
-	Name NVARCHAR(30) NOT NULL,
+	Name NVARCHAR(100) NOT NULL,
 	IsExtraTask BIT NOT NULL,
 	MaxPoints INT NOT NULL,
-	LessonId INT FO NOT NULL,
-	SubmissionType INT FOREIGN KEY REFERENCES Lessons(Id) NOT NULL,
+	LessonId INT FOREIGN KEY REFERENCES Lessons(Id) NOT NULL,
 	AllowedMemoryInMegaBytes FLOAT NOT NULL,
 	AllowedTimeInMilliseconds INT NOT NULL,
 	TimeIntervalBetweenSubmissionInSeconds INT NOT NULL,
-	AllowedMinCodeDifferenceInPercentage INT NOT NULL,
 	OrderBy INT NOT NULL
 )
 GO
@@ -77,6 +78,9 @@ CREATE TABLE Resources (
 )
 GO
 
+ALTER TABLE Resources ADD DEFAULT GETDATE() FOR CreatedOn
+GO
+
 CREATE TABLE Submissions (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	[Code] VARBINARY(max) NOT NULL,
@@ -84,7 +88,6 @@ CREATE TABLE Submissions (
 	SubmisionDate DATETIME2(7) NOT NULL,
 	UserId INT FOREIGN KEY REFERENCES Users(Id) NULL,
 	CompilationErrors VARBINARY(max) NULL,
-	LessonId INT FOREIGN KEY REFERENCES Lessons(Id) NULL,
 	ActualPoints INT NOT NULL
 )
 GO
@@ -92,8 +95,8 @@ GO
 CREATE TABLE Tests (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	ProblemId INT FOREIGN KEY REFERENCES Problems(Id),
-	InputData NVARCHAR(max) NULL,
-	OutputData NVARCHAR(max) NOT NULL,
+	Input NVARCHAR(max) NULL,
+	ExpectedOutput NVARCHAR(max) NOT NULL,
 	IsTrialTest BIT NOT NULL,
 	OrderBy INT NOT NULL,
 )
@@ -107,10 +110,13 @@ CREATE TABLE ExecutedTests (
 	TestId INT FOREIGN KEY REFERENCES Tests(Id) NOT NULL,
 	SubmissionId INT FOREIGN KEY REFERENCES Submissions(Id) NOT NULL,
 	Error NVARCHAR(max) NULL,
-	ExecutionResultType NVARCHAR(50) NOT NULL,
+	ExecutionResultType NVARCHAR(50) NOT NULL, -- Run Time Error, Compilaton Error, Wrong answer
 	MemoryUsed FLOAT NOT NULL,
 	TimeUsed FLOAT NOT NULL,
 )
+GO
+
+ALTER TABLE ExecutedTests ADD DEFAULT GETDATE() FOR CreatedOn
 GO
 
 CREATE TABLE Contests (
@@ -119,7 +125,7 @@ CREATE TABLE Contests (
 	EndTime DATETIME2(7) NOT NULL,
 	LessonId INT FOREIGN KEY REFERENCES Lessons(Id) NOT NULL,
 	[Name] NVARCHAR(50) NOT NULL,
-	PasswordHash NVARCHAR(500) NOT NULL,
+	PasswordHash NVARCHAR(500),
 )
 GO
 
@@ -135,7 +141,8 @@ GO
 
 CREATE TABLE AllowedIpAddresses (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
-	[Value] NVARCHAR(200) NOT NULL
+	[Value] NVARCHAR(500) NOT NULL,
+	[DiplayName] NVARCHAR(300) NOT NULL
 )
 GO
 

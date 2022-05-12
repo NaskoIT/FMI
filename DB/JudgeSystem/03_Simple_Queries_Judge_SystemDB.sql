@@ -1,0 +1,26 @@
+-- 1. Get tests by problem
+-- 2. Get upcomming contests
+-- 3. Get contest submissions
+-- 4. Get all courses
+-- 5. Get all lesson by course id
+-- 6. Search lesson by name
+-- 7. Search resource by name
+-- 8. Get all resources for course
+-- 9. Get all submissions by problemId and userId
+-- 10. Get best submission by problemId and userId
+-- 11. Get user best submissions per contest
+-- 12. Get submission result
+-- 13. Get allowed IP addreses per contest
+-- 14. Get contests in range
+-- 15. Get active contests - DateTime. now is between StartTime and EndTime
+-- 16. Get contest results peages count, assume that we get 10 entries per page
+-- 17. Get all courses with lectuers and problems
+-- 18. Count tests per problem
+-- 19. Count problems per course
+-- 20. Search in the lessons, problems and resources
+-- 21. Get problem name by submission id
+-- Get contest results by contest id
+
+
+-- procedure
+-- Claulate actual points

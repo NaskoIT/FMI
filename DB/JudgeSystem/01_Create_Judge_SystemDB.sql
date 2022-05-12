@@ -3,6 +3,7 @@ GO
 
 -- 1. Create database
 CREATE DATABASE [JudgeSystemDB]
+GO
 
 -- 2. Switch to the our database
 USE [JudgeSystemDB]
@@ -36,6 +37,10 @@ CREATE TABLE UserRoles (
 	RoleId INT FOREIGN KEY REFERENCES Roles(Id) NOT NULL
 )
 GO
+
+INSERT INTO Roles(Id, [Name]) VALUES (1, 'User');
+INSERT INTO Roles(Id, [Name]) VALUES (2, 'Lecturer');
+INSERT INTO Roles(Id, [Name]) VALUES (3, 'Administrator');
 
 ALTER TABLE UserRoles ADD CONSTRAINT PK_UserId_RolesId_UserRoles PRIMARY KEY (UserId, RoleId)
 GO
@@ -142,7 +147,7 @@ GO
 CREATE TABLE AllowedIpAddresses (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	[Value] NVARCHAR(500) NOT NULL,
-	[DiplayName] NVARCHAR(300) NOT NULL
+	[DisplayName] NVARCHAR(300) NOT NULL
 )
 GO
 
@@ -155,8 +160,6 @@ GO
 ALTER TABLE ContestAllowedIpAddresses 
 ADD CONSTRAINT PK_AllowedIpAddressId_ContestId_ContestAllowedIpAddresses PRIMARY KEY(AllowedIpAddressId, ContestId)
 GO
-
-
 
 
 

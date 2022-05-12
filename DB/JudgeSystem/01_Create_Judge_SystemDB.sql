@@ -38,10 +38,6 @@ CREATE TABLE UserRoles (
 )
 GO
 
-INSERT INTO Roles(Id, [Name]) VALUES (1, 'User');
-INSERT INTO Roles(Id, [Name]) VALUES (2, 'Lecturer');
-INSERT INTO Roles(Id, [Name]) VALUES (3, 'Administrator');
-
 ALTER TABLE UserRoles ADD CONSTRAINT PK_UserId_RolesId_UserRoles PRIMARY KEY (UserId, RoleId)
 GO
 
@@ -88,11 +84,11 @@ GO
 
 CREATE TABLE Submissions (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
-	[Code] VARBINARY(max) NOT NULL,
+	[Code] VARBINARY(MAX) NOT NULL,
 	ProblemId INT FOREIGN KEY REFERENCES Problems(Id) NOT NULL,
 	SubmisionDate DATETIME2(7) NOT NULL,
 	UserId INT FOREIGN KEY REFERENCES Users(Id) NULL,
-	CompilationErrors VARBINARY(max) NULL,
+	CompilationErrors VARBINARY(MAX) NULL,
 	ActualPoints INT NOT NULL
 )
 GO
@@ -115,7 +111,7 @@ CREATE TABLE ExecutedTests (
 	TestId INT FOREIGN KEY REFERENCES Tests(Id) NOT NULL,
 	SubmissionId INT FOREIGN KEY REFERENCES Submissions(Id) NOT NULL,
 	Error NVARCHAR(max) NULL,
-	ExecutionResultType NVARCHAR(50) NOT NULL, -- Run Time Error, Compilaton Error, Wrong answer
+	ExecutionResultType NVARCHAR(50) NOT NULL, -- Correct, Run Time Error, Compilaton Error, Wrong answer, Exceeded Time
 	MemoryUsed FLOAT NOT NULL,
 	TimeUsed FLOAT NOT NULL,
 )

@@ -71,13 +71,13 @@ INSERT INTO AllowedIpAddresses(Value, DisplayName) values ('221.41.4.5', 'MG Bab
 -- Courses
 INSERT INTO Courses([Name], OrderBy) VALUES ('Introduction to Programming', 0);
 INSERT INTO Courses([Name], OrderBy) VALUES ('Programming Fundamentals', 10);
-INSERT INTO Courses([Name], OrderBy) VALUES ('OOP Basics', 20);;
-INSERT INTO Courses([Name], OrderBy) VALUES ('Data Structures', 40);
-INSERT INTO Courses([Name], OrderBy) VALUES ('Algorithms', 50);
+INSERT INTO Courses([Name], OrderBy) VALUES ('OOP Basics', 20);
+INSERT INTO Courses([Name], OrderBy) VALUES ('Data Structures', 30);
+INSERT INTO Courses([Name], OrderBy) VALUES ('Algorithms', 40);
 
 -- Lessons
 -- Introduction to programming
-INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Data Types and Varaibles', 1, 0);
+INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Data Types and Variables', 1, 0);
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Conditional Statements', 1, 10);
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Loops', 1, 20);
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Nested Loops', 1, 30);
@@ -119,14 +119,14 @@ INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Combinatorial Problems',
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Searching, Sorting and Greedy Algorithms', 5, 20);
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Graph Theory, Traversal and Shortest Paths', 5, 30);
 INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Dynamic Programming', 5, 40);
-INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Graphs Topologica Sorting, MST', 5, 0);
+INSERT INTO Lessons ([Name], CourseId, OrderBy) VALUES('Graphs Topologica Sorting, MST', 5, 50);
 
 -- Problems
 -- Data types and variables
 INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
-VALUES('Sum Two Numbers', 0, 100, 1, 5, 300, 10, 10);
+VALUES('Sum Two Numbers', 0, 100, 1, 5, 300, 10, 0);
 INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
-VALUES('Caluclator', 1, 100, 1, 7, 500, 10, 20);
+VALUES('Caluclator', 1, 100, 1, 7, 500, 10, 10);
 
 -- Conditional statements
 INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
@@ -139,8 +139,8 @@ INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMe
 VALUES('Sum numbers', 0, 100, 3, 10, 500, 20, 0);
 INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
 VALUES('Average number', 0, 100, 3, 10, 500, 20, 10);
-INSERT INTO Problems(Id, [Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
-VALUES(8, 'Min and Max Number', 0, 100, 3, 10, 500, 20, 20);
+INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
+VALUES('Min and Max Number', 0, 100, 3, 10, 500, 20, 20);
 
 -- Nested loops
 INSERT INTO Problems([Name], IsExtraTask, MaxPoints, LessonId, AllowedMemoryInMegaBytes, AllowedTimeInMilliseconds, TimeIntervalBetweenSubmissionInSeconds, OrderBy)
@@ -161,6 +161,10 @@ INSERT INTO Resources(LessonId, [Name], FilePath, OrderBy)
 VALUES(1, 'Sum Two Numbers Solution', 'fileServer/1/1/sum-two-numbers.cpp', 10);
 INSERT INTO Resources(LessonId, [Name], FilePath, OrderBy)
 VALUES(1, 'Data Types and Varables - Exercise', 'fileServer/1/1/data-types-and-variables-exercise.docx', 20);
+INSERT INTO Resources(LessonId, [Name], FilePath, OrderBy)
+VALUES(2, 'Conditional Statements Introduction', 'fileServer/1/1/conditionals_into.pdf', 0);
+INSERT INTO Resources(LessonId, [Name], FilePath, OrderBy)
+VALUES(2, 'If Statements, Switch Statemtens', 'fileServer/1/1/conditionals.pdf', 10);
 
 -- Submissions
 INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
@@ -181,6 +185,56 @@ VALUES(
 	CONVERT(VARBINARY(MAX), 'Missing ; on the first line'), 
 	0);
 
+INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+VALUES(
+	CONVERT(VARBINARY(MAX),
+	'#include<iostream>; int main() { int A,B; cin >> A >> B; cout << A * B;}'),
+	1,
+	'2022-05-14 00:05:31.327',
+	1,
+	NULL,
+	100);
+
+INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+VALUES(
+	CONVERT(VARBINARY(MAX),
+	'#include<iostream>; int main() { int A,B; cin >> A >> B; cout << A - B;}'),
+	2,
+	'2022-05-14 00:06:31.321',
+	2,
+	NULL,
+	45);
+
+INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+VALUES(
+	CONVERT(VARBINARY(MAX),
+	'#include<iostream> #include<cmath> using namespace std; int main() {int A,B; cin >> A >> B; cout << pow(A, B);}'),
+	2,
+	'2022-05-14 00:06:31.321',
+	2,
+	NULL,
+	80);
+
+INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+VALUES(
+	CONVERT(VARBINARY(MAX),
+	'#include<iostream>; int main() { int A,B; cin >> A >> B; cout << A // B;}'),
+	2,
+	'2022-05-14 00:07:31.227',
+	1,
+	NULL,
+	50);
+
+INSERT INTO Submissions([Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+VALUES(
+	CONVERT(VARBINARY(MAX),
+	'#include<iostream>; int main() { int A,B; cin >> A >> B; cout << A * B;}'),
+	1,
+	'2022-03-13 00:05:31.327',
+	4,
+	NULL,
+	85);
+
 -- Tests
 INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
 VALUES(1, '5\n5', '10', 1, 0);
@@ -193,6 +247,27 @@ VALUES(1, '5\n150', '155', 0, 30);
 INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
 VALUES(1, '-5\n-150', '-155', 0, 40);
 
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(2, '5\n5', '77', 1, 50);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(2, '5\n3 12 15 6 18', '5', 1, 60);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(2, '5\n-3 -12 -8 5 6', '40', 0, 70);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(2, '5\n150 4 3 2 1', '12', 0, 80);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(2, '2\n3 4', '55', 0, 90);
+
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(3, '3\n5 4 3', '1', 1, 100);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(3, '2\n3 4', '5', 0, 110);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(3, '1\n-3', '12', 0, 120);
+INSERT INTO Tests(ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy)
+VALUES(3, '1\n150', '15', 0, 130);
+
+
 -- Executed Tests
 INSERT INTO ExecutedTests(CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
 VALUES('2022-05-13 00:05:31.327', 1, '10', 1, 1, NULL, 'Correct', 2, 200);
@@ -203,14 +278,41 @@ VALUES('2022-05-13 00:05:32.327', 0, NULL, 3, 1, 'Cannot parse negative number',
 INSERT INTO ExecutedTests(CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
 VALUES('2022-05-13 00:05:32.258', 1, '155', 4, 1, NULL, 'Correct', 2, 200);
 INSERT INTO ExecutedTests(CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
-VALUES('2022-05-13 00:05:31.589', 0, NULL, 5, 1, 'Cannot parse negative number', 'Run Time Error', 4, 350);
+VALUES('2022-05-13 00:05:31.589', 0, NULL, 5, 6, 'Cannot parse negative number', 'Run Time Error', 4, 350);
+INSERT INTO ExecutedTests(CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
+VALUES('2022-05-13 00:05:31.589', 0, NULL, 5, 7, 'Segmentation Fault', 'Run Time Error', 6, 500);
+INSERT INTO ExecutedTests(CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
+VALUES('2022-05-13 00:05:31.589', 1, NULL, 5, 4, NULL, 'Correct', 2, 200);
 
 -- Contests
 INSERT INTO Contests(StartTime, EndTime, LessonId, [Name], PasswordHash)
-VALUES('2022-05-13 00:00:00.000', '2022-05-18 00:00:00.000', 1, 'Data types and varaibles - Homework', NULL);
+VALUES('2022-05-13 00:00:00.000', '2022-05-18 00:00:00.000', 1, 'Data types and variables - Homework', NULL);
+INSERT INTO Contests(StartTime, EndTime, LessonId, [Name], PasswordHash)
+VALUES('2022-05-20 00:00:00.000', '2022-05-25 00:00:00.000', 1, 'Constant variables', NULL);
+
+INSERT INTO Contests(StartTime, EndTime, LessonId, [Name], PasswordHash)
+VALUES('2022-05-25 00:00:00.000', '2022-05-30 00:00:00.000', 2, 'If statements', NULL);
+INSERT INTO Contests(StartTime, EndTime, LessonId, [Name], PasswordHash)
+VALUES('2022-06-15 00:00:00.000', '2022-6-20 00:00:00.000', 3, 'Switch statements', NULL);
 
 -- UserContests
 INSERT INTO UserContests(UserId, ContestId) VALUES(1, 1);
+INSERT INTO UserContests(UserId, ContestId) VALUES(1, 2);
+INSERT INTO UserContests(UserId, ContestId) VALUES(1, 3);
+INSERT INTO UserContests(UserId, ContestId) VALUES(2, 2);
+INSERT INTO UserContests(UserId, ContestId) VALUES(3, 3);
+INSERT INTO UserContests(UserId, ContestId) VALUES(4, 2);
+INSERT INTO UserContests(UserId, ContestId) VALUES(7, 3);
+INSERT INTO UserContests(UserId, ContestId) VALUES(8, 1);
 
 -- ContestAllowedIpAddresses
 INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(1, 1);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(1, 2);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(1, 3);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(2, 1);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(2, 5);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(3, 1);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(3, 2);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(3, 3);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(3, 4);
+INSERT INTO ContestAllowedIpAddresses(ContestId, AllowedIpAddressId) VALUES(4, 5);

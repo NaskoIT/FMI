@@ -93,6 +93,25 @@ CREATE TABLE Submissions (
 )
 GO
 
+CREATE TABLE DeletedSubmissions (
+	Id INT PRIMARY KEY NOT NULL,
+	[Code] VARBINARY(MAX) NOT NULL,
+	ProblemId INT FOREIGN KEY REFERENCES Problems(Id) NOT NULL,
+	SubmisionDate DATETIME2(7) NOT NULL,
+	UserId INT FOREIGN KEY REFERENCES Users(Id) NULL,
+	CompilationErrors VARBINARY(MAX) NULL,
+	ActualPoints INT NOT NULL
+)
+GO
+
+CREATE TRIGGER tr_DeleteSubmission ON Submissions 
+FOR DELETE
+AS
+	INSERT INTO DeletedSubmissions(Id, [Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints)
+	SELECT Id, [Code], ProblemId, SubmisionDate, UserId, CompilationErrors, ActualPoints FROM deleted 
+GO
+
+
 CREATE TABLE Tests (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	ProblemId INT FOREIGN KEY REFERENCES Problems(Id),
@@ -109,12 +128,36 @@ CREATE TABLE ExecutedTests (
 	IsCorrect BIT NOT NULL,
 	[Output] NVARCHAR(max) NULL,
 	TestId INT FOREIGN KEY REFERENCES Tests(Id) NOT NULL,
-	SubmissionId INT FOREIGN KEY REFERENCES Submissions(Id) NOT NULL,
+	SubmissionId INT NOT NULL,
 	Error NVARCHAR(max) NULL,
 	ExecutionResultType NVARCHAR(50) NOT NULL, -- Correct, Run Time Error, Compilaton Error, Wrong answer, Exceeded Time
 	MemoryUsed FLOAT NOT NULL,
 	TimeUsed FLOAT NOT NULL,
 )
+GO
+
+ALTER TABLE ExecutedTests ADD FOREIGN KEY (SubmissionId) REFERENCES Submissions(Id) ON DELETE CASCADE
+GO
+
+CREATE TABLE DeletedExecutedTests (
+	Id INT PRIMARY KEY NOT NULL,
+	CreatedOn DATETIME2(7) NOT NULL,
+	IsCorrect BIT NOT NULL,
+	[Output] NVARCHAR(max) NULL,
+	TestId INT FOREIGN KEY REFERENCES Tests(Id) NOT NULL,
+	SubmissionId INT NOT NULL,
+	Error NVARCHAR(max) NULL,
+	ExecutionResultType NVARCHAR(50) NOT NULL, -- Correct, Run Time Error, Compilaton Error, Wrong answer, Exceeded Time
+	MemoryUsed FLOAT NOT NULL,
+	TimeUsed FLOAT NOT NULL,
+)
+GO
+
+CREATE TRIGGER tr_DeleteExecutedTest ON ExecutedTests 
+FOR DELETE
+AS
+	INSERT INTO DeletedExecutedTests(Id, CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed)
+	SELECT Id, CreatedOn, IsCorrect, [Output], TestId, SubmissionId, Error, ExecutionResultType, MemoryUsed, TimeUsed FROM deleted
 GO
 
 ALTER TABLE ExecutedTests ADD DEFAULT GETDATE() FOR CreatedOn
@@ -156,6 +199,3 @@ GO
 ALTER TABLE ContestAllowedIpAddresses 
 ADD CONSTRAINT PK_AllowedIpAddressId_ContestId_ContestAllowedIpAddresses PRIMARY KEY(AllowedIpAddressId, ContestId)
 GO
-
-
-

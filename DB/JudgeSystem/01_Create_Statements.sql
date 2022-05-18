@@ -122,6 +122,25 @@ CREATE TABLE Tests (
 )
 GO
 
+CREATE TABLE TestVersions (
+	Id INT PRIMARY KEY IDENTITY NOT NULL,
+	TestId INT,
+	ProblemId INT FOREIGN KEY REFERENCES Problems(Id),
+	Input NVARCHAR(max) NULL,
+	ExpectedOutput NVARCHAR(max) NOT NULL,
+	IsTrialTest BIT NOT NULL,
+	OrderBy INT NOT NULL,
+	UpdateOn DATETIME2(7) NOT NULL
+)
+GO
+
+CREATE TRIGGER TR_TestUpdated ON Tests FOR UPDATE
+AS
+INSERT INTO TestVersions(TestId, ProblemId, Input, ExpectedOutput, IsTrialTest, OrderBy, UpdateOn)
+SELECT p.Id, p.ProblemId, p.Input, p.ExpectedOutput, p.IsTrialTest, p.OrderBy, GETDATE()
+FROM deleted as p
+GO
+
 CREATE TABLE ExecutedTests (
 	Id INT PRIMARY KEY IDENTITY NOT NULL,
 	CreatedOn DATETIME2(7) NOT NULL,

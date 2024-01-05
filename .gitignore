@@ -36,3 +36,5 @@ Debug/
 
 .idea/
 Machine learning/AudioXplorer/data/*
+
+Machine learning/DigitsRecognizer/data/*

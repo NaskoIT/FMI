@@ -4,21 +4,21 @@ int n = int.Parse(Console.ReadLine()!);
 
 var towns = GenerateTowns(n).ToList();
 
-const int POPULATION_SIZE = 20;
-const int MAX_GENERATIONS = 10;
-const int MUTATION_RATE = 2;
-
-var population = CreateInitialPopulation(towns, POPULATION_SIZE).ToList();
-
+const int POPULATION_SIZE = 100;
+const int MAX_GENERATIONS = 20;
+const int MUTATION_RATE = 4;
+Random random = new(183);
 Solution bestSolution = null;
+
+var population = CreateInitialPopulation(towns, POPULATION_SIZE * 100, random).ToList();
 
 for (int i = 0; i < MAX_GENERATIONS; i++)
 {
     var parents = SelectParents(population);
 
-    var nextPopulation = Reproduction(parents);
+    var nextPopulation = Reproduction(parents, random);
 
-    Mutate(nextPopulation, MUTATION_RATE);
+    Mutate(nextPopulation, MUTATION_RATE, random);
 
     Evaluate(nextPopulation);
 
@@ -27,9 +27,8 @@ for (int i = 0; i < MAX_GENERATIONS; i++)
     if (bestSolution == null || bestSolution.Distance > population.First().Distance)
     {
         bestSolution = population.First();
+        //Console.WriteLine("Better solution found: " + bestSolution);
     }
-
-    Console.WriteLine(population.First());
 }
 
 Console.WriteLine(bestSolution);
@@ -41,7 +40,7 @@ static IList<Solution> SelectParents(IList<Solution> population)
 {
     return population
         .OrderBy(x => x.Distance)
-        .Take(population.Count / 2)
+        .Take(POPULATION_SIZE)
         .ToList();
 }
 
@@ -53,18 +52,17 @@ static void Evaluate(IList<Solution> nextPopulation)
     }
 }
 
-static IList<Solution> Reproduction(IList<Solution> parents)
+static IList<Solution> Reproduction(IList<Solution> parents, Random random)
 {
     var nextPopulation = new List<Solution>();
 
-    for (int i = 0; i < parents.Count; i++)
+    for (int i = 0; i < parents.Count - 1; i++)
     {
         for (int j = 0; j < parents.Count; j++)
         {
             if (i != j)
             {
-                nextPopulation.Add(CrossOver(parents[i], parents[j]));
-                nextPopulation.Add(CrossOver(parents[j], parents[i]));
+                nextPopulation.Add(CrossOver(parents[i], parents[j], random));
             }
         }
     }
@@ -72,49 +70,54 @@ static IList<Solution> Reproduction(IList<Solution> parents)
     return nextPopulation;
 }
 
-static Solution CrossOver(Solution firstParent, Solution secondParent)
+static Solution CrossOver(Solution firstParent, Solution secondParent, Random random)
 {
-    var random = new Random();
     int length = firstParent.Towns.Count;
-    int startIndex = random.Next(length - 1);
-    int endIndex = random.Next(startIndex + 1, length);
+    int startIndex = random.Next(length - length / 2);
+    int endIndex = random.Next(startIndex + 5, length - 2);
 
     var child = new Town[length];
 
+
+    var childGenesSet = new HashSet<Town>();
     for (int i = startIndex; i <= endIndex; i++)
     {
-        child[i] = firstParent.Towns[i];
+        child[i] = secondParent.Towns[i];
+        childGenesSet.Add(secondParent.Towns[i]);
     }
 
-    int sourceIndex = endIndex + 2;
-    for (int i = 0; i < length; i++)
+    var townsToAdd = new List<Town>();
+    foreach (var town in firstParent.Towns)
+    {
+        if (!childGenesSet.Contains(town))
+        {
+            townsToAdd.Add(town);
+            childGenesSet.Add(town);
+        }
+    }
+
+    int index = 0;
+    for (int i = 0; i < child.Length; i++)
     {
         if (child[i] == null)
         {
-            while (Array.IndexOf(child, secondParent.Towns[sourceIndex % length]) != -1)
-            {
-                sourceIndex++;
-            }
-
-            child[i] = secondParent.Towns[sourceIndex % length];
-            sourceIndex++;
+            child[i] = townsToAdd[index++];
         }
     }
 
     return new Solution(child);
 }
 
-static void Mutate(IList<Solution> solutions, int mutationRate)
+static void Mutate(IList<Solution> solutions, int mutationRate, Random random)
 {
     foreach (Solution solution in solutions)
     {
-        MutateSolution(solution, mutationRate);
+        MutateSolution(solution, mutationRate, random);
     }
 }
 
-static void MutateSolution(Solution solution, int mutationRate)
+static void MutateSolution(Solution solution, int mutationRate, Random random)
 {
-    var random = new Random();
     for (int i = 0; i < solution.Towns.Count; i++)
     {
         if (random.Next(1, 11) <= MUTATION_RATE)
@@ -127,17 +130,16 @@ static void MutateSolution(Solution solution, int mutationRate)
     }
 }
 
-static IEnumerable<Solution> CreateInitialPopulation(IList<Town> towns, int populationSize)
+static IEnumerable<Solution> CreateInitialPopulation(IList<Town> towns, int populationSize, Random random)
 {
     for (int i = 0; i < populationSize; i++)
     {
-        yield return new Solution(Randomize(towns));
+        yield return new Solution(Randomize(towns, random));
     }
 }
 
-static IList<Town> Randomize(IList<Town> towns)
+static IList<Town> Randomize(IList<Town> towns, Random random)
 {
-    var random = new Random();
     return towns.Select(x => new { Town = x, Order = random.Next(0, towns.Count * 10) })
         .OrderBy(x => x.Order)
         .Select(x => x.Town)
@@ -146,8 +148,39 @@ static IList<Town> Randomize(IList<Town> towns)
 
 static IEnumerable<Town> GenerateTowns(int n)
 {
-    var x = GetUniqueRandomRange(0, n);
-    var y = GetUniqueRandomRange(0, n);
+    // ~1500
+    var x = new List<double>()
+    {
+        1.90E-04,
+        383.458,
+        -27.0206,
+        335.751,
+        69.4331,
+        168.521,
+        320.35,
+        179.933,
+        492.671,
+        112.198,
+        306.32,
+        217.343
+    };
+
+
+    var y = new List<double>()
+    {
+        -2.86E-04,
+        -6.09E-04,
+        -282.758,
+        -269.577,
+        -246.78,
+        31.4012,
+        -160.9,
+        -318.031,
+        -131.563,
+        -110.561,
+        -108.09,
+        -447.089,
+    };
 
     for (var i = 0; i < x.Count; i++)
     {
@@ -165,7 +198,7 @@ static IList<int> GetUniqueRandomRange(int start, int count)
         .ToList();
 }
 
-record Town(int X, int Y, string Identifier)
+record Town(double X, double Y, string Identifier)
 {
     public double GetDistance(Town town)
     {
@@ -179,6 +212,11 @@ record Town(int X, int Y, string Identifier)
     public override string ToString()
     {
         return Identifier;
+    }
+
+    public override int GetHashCode()
+    {
+        return this.Identifier.GetHashCode();
     }
 }
 
@@ -220,8 +258,6 @@ record Solution
         {
             totalDistance += this.Towns[i].GetDistance(this.Towns[i + 1]);
         }
-
-        totalDistance += this.Towns.First().GetDistance(this.Towns.Last());
 
         return totalDistance;
     }

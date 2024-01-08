@@ -1,0 +1,15 @@
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\bin\Release\net7.0\SlidePuzzle.exe
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\bin\Release\net7.0\SlidePuzzle.deps.json
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\bin\Release\net7.0\SlidePuzzle.runtimeconfig.json
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\bin\Release\net7.0\SlidePuzzle.dll
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\bin\Release\net7.0\SlidePuzzle.pdb
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.csproj.AssemblyReference.cache
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.AssemblyInfoInputs.cache
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.AssemblyInfo.cs
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.csproj.CoreCompileInputs.cache
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.dll
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\refint\SlidePuzzle.dll
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.pdb
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\SlidePuzzle.genruntimeconfig.cache
+C:\Semester 7\ИС\SlidePuzzle\SlidePuzzle\obj\Release\net7.0\ref\SlidePuzzle.dll
